@@ -1,6 +1,6 @@
 Fit hand-drawn curve
 ===========
-It can convert the curve you draw on the coordinate map manually into a smooth coordinate sequence.
+It can convert the curve you draw on the coordinate diagram manually into a smooth coordinate sequence.
 
 How to use
 ----------
