@@ -45,8 +45,8 @@ while x<xMax:
 import cubic
 f=cubic.cubic(allX,allY)
 
-dayStart=int((xStart-x0)/x1) # 预测起始天
-dayEnd=90 # 预测结束天
+dayStart=int((xStart-x0)/x1) # 预测起始天（坐标图中x坐标）
+dayEnd=90 # 预测结束天（坐标图中x坐标），自己指定
 
 allPos=[]
 zeroPos=-1
