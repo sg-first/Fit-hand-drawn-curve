@@ -17,6 +17,7 @@ x1=(146-92)/10
 
 xStart=330 # 写生起点， 自己指定
 xMax=576
+yMin=350
 y0=410
 x0=80
 yKnow=332 # 0上面一个区间点的坐标，自己指定
@@ -30,14 +31,17 @@ allY=[]
 x=xStart
 lastAppendX=None
 while x<xMax:
-    for y in range(yMax,y0):
+    for y in range(yMax,yMin):
         xi = int(x)
         if xi!=lastAppendX and isColor(img[y, xi]):
             xReal = (xi - x0) / x1
             if xReal != lastAppendX:
                 allX.append(xReal)
                 lastAppendX = xReal
-                yReal=(y0 - y) / y1
+                if y>=y0: # 坐标点比0小
+                    yReal=0 # 比0小就是0
+                else:
+                    yReal=(y0 - y) / y1
                 allY.append(yReal)
                 print(xReal,yReal)
     x+=x1
